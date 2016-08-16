@@ -1,0 +1,23 @@
+{
+  "name": "shariff-backend-node-lambda",
+  "version": "1.0.0",
+  "description": "Wrapper to run the Shariff (https://github.com/heiseonline/shariff) backend in AWS lambda.",
+  "main": "index.js",
+  "dependencies": {
+    "shariff-backend-node": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saylordotorg/shariff-backend-node-lambda"
+  },
+  "author": {
+    "name": "John Azinheira",
+    "email": "john.azinheira@saylor.org"
+  },
+  "license": "MIT"
+
+}
