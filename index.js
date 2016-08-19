@@ -1,6 +1,4 @@
 
-
-'use strict';
 console.log('Loading function');
 
 exports.handler = function(event, context, callback) {
@@ -9,8 +7,13 @@ exports.handler = function(event, context, callback) {
 
 	var Shariff = require('shariff-backend-node');
 
-	Shariff.getCounts(url.then(function(counts) {callback(null, 'Success, counts:' + counts);}, function(err) {callback(err);});
+	console.log('Getting counts for URL: ' + url);
 
-
-	callback(null, "Success"); // Indicates success with information returned to the caller.
+	Shariff.getCounts(url, true).then(function(counts) {
+		console.log('Successfully retrieved counts for URL: ' + url + '. ', counts);
+		callback(null, counts);
+	}, function(err) {
+		console.log('Error retrieving counts for URL: ' + url + '. ', err);
+		callback(err);
+	});
 }
